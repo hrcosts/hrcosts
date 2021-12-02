@@ -45,7 +45,18 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/sitemap' // SITEMAP MUSST BE THE LAST ENTRY OF MODULES
   ],
+
+   // Sitemap configuration (available under: localhost:3000/sitemap.xml)
+  sitemap: {
+    hostname: 'https://hrcosts.com',
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    },
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
